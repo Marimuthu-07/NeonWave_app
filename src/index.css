@@ -44,3 +44,25 @@
   animation: spin-slow 22s linear infinite;
 }
 
+@keyframes equalizer {
+  0%, 100% {
+    transform: scaleY(0.3);
+  }
+  50% {
+    transform: scaleY(1.1);
+  }
+}
+
+.animate-equalizer-bar-1 {
+  animation: equalizer 0.8s ease-in-out infinite;
+  transform-origin: bottom;
+}
+.animate-equalizer-bar-2 {
+  animation: equalizer 0.8s ease-in-out infinite 0.25s;
+  transform-origin: bottom;
+}
+.animate-equalizer-bar-3 {
+  animation: equalizer 0.8s ease-in-out infinite 0.45s;
+  transform-origin: bottom;
+}
+

@@ -58,6 +58,12 @@ export default function App() {
     setPlayerMode(prev => (prev === 'spotify' ? 'artwork' : 'spotify'));
   };
 
+  const handleAddFilesBatch = async (files: File[]) => {
+    for (const file of files) {
+      await handleAddNewTrack(file);
+    }
+  };
+
   return (
     <div 
       className={`relative w-screen h-screen overflow-hidden flex flex-col bg-linear-to-b text-zinc-100 font-sans tracking-tight ${activeTheme.bg}`}
@@ -95,6 +101,7 @@ export default function App() {
             onDeleteFolder={deleteFolder}
             onMoveTrackToFolder={moveTrackToFolder}
             onAddFolderBatch={handleImportFolderBatch}
+            onAddFiles={handleAddFilesBatch}
           />
         ) : (
           <ArtworkMode

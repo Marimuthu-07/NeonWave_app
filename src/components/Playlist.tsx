@@ -163,7 +163,7 @@ export default function Playlist({
                   ref={fileInputRef}
                   onChange={handleFileChange}
                   multiple
-                  accept="audio/*,.flac,.wav"
+                  accept="audio/*,.mp3,.m4a,.flac,.wav,.ogg"
                   className="hidden"
                 />
                 <div className="flex items-center gap-1.5 justify-center">
